@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="assets/images/logo.svg" alt=""></a>
+        </div>
+        <div class="header-line"></div>
+        <nav class="nav">
+            <a href="#" class="nav__item active"><span class="nav__route-number">00</span> HOME</a>
+            <a href="#" class="nav__item"><span class="nav__route-number">01</span> DESTINATION</a>
+            <a href="#" class="nav__item"><span class="nav__route-number">02</span> CREW</a>
+            <a href="#" class="nav__item"><span class="nav__route-number">04</span> TECHNOLOGY</a>
+        </nav>
+        <div class="menu-icon">            
+            <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="3" fill="#D0D6F9"/>
+                <rect y="9" width="24" height="3" fill="#D0D6F9"/>
+                <rect y="18" width="24" height="3" fill="#D0D6F9"/>
+            </svg>    
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="section__bg"> 
+                <img src="assets/images/Bitmap.jpg" class="desktop-bg" alt="">
+                <img src="assets/images/mobile-first-bg.jpg" class="mobile-bg" alt="">
+            </div>
+            <div class="content-wrapper home-content">
+                <div class="home-content__left-item">
+                    <div class="home-content__text">
+                        <h3>SO, YOU WANT TO TRAVEL TO</h3>
+                        <h2>SPACE</h2>
+                        <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                    </div>
+                </div>
+                <div class="home-content__right-item">
+                    <a href="" class="home-content__home-explore">EXPLORE</a>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__bg">
+                <img src="assets/images/destination-bg.jpg" alt="">
+            </div>
+            <div class="content-wrapper d-content">
+                <div class="content-wrapper__content-title">
+                    <h2><span>01</span> PICK YOUR DESTINATION</h2>
+                </div>
+                    <div class="d-content__wrapper">                      
+                                <div class="d-content__desktop-tab">
+                                    <button class="d-content__tab-btn active-btn" onclick="openTab(event, 'moon')">MOON</button>
+                                    <button class="d-content__tab-btn" onclick="openTab(event, 'mars')">MARS</button>
+                                    <button class="d-content__tab-btn" onclick="openTab(event, 'europa')">EUROPA</button>
+                                    <button class="d-content__tab-btn" onclick="openTab(event, 'titan')">TITAN</button>
+                                </div>
+                        <div class="d-content__tabcontent active-tab" id="moon">
+                            <div class="d-content__pick-planet d-content__pick-planet--moon"> 
+                                <div class="d-content__planet d-content__planet--moon"></div>
+                            </div>
+                            <div class="d-content__mobile-tab">
+                                <button class="d-content__mobile-tab-btn active-mobile-btn" onclick="openTab(event, 'moon')">MOON</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'mars')">MARS</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'europa')">EUROPA</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'titan')">TITAN</button>
+                            </div>
+                            <div class="d-content__planet-desc">
+                                <div class="d-content__tabdesc">
+                                    <h2>MOON</h2>
+                                    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                                </div>
+                                <div class="d-content__tab-bottom">
+                                    <div class="bottom-item">
+                                        <div class="title">AVG. DISTANCE</div>
+                                        <div class="desc">384.000 KM</div>
+                                    </div>
+                                    <div class="bottom-item">
+                                        <div class="title">EST. TRAVEL TIME</div>
+                                        <div class="desc">3 DAYS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-content__tabcontent" id="mars">
+                            <div class="d-content__pick-planet d-content__pick-planet--mars"> 
+                                <div class="d-content__planet d-content__planet--mars"></div>
+                            </div>
+                            <div class="d-content__mobile-tab">
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'moon')">MOON</button>
+                                <button class="d-content__mobile-tab-btn active-mobile-btn" onclick="openTab(event, 'mars')">MARS</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'europa')">EUROPA</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'titan')">TITAN</button>
+                            </div>
+                            <div class="d-content__planet-desc">
+                                <div class="d-content__tabdesc">
+                                    <h2>MARS</h2>
+                                    <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+                                </div>
+                                <div class="d-content__tab-bottom">
+                                    <div class="bottom-item">
+                                        <div class="title">AVG. DISTANCE</div>
+                                        <div class="desc">225 MIL. KM</div>
+                                    </div>
+                                    <div class="bottom-item">
+                                        <div class="title">EST. TRAVEL TIME</div>
+                                        <div class="desc">9 MONTHS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-content__tabcontent" id="europa">
+                            <div class="d-content__pick-planet d-content__pick-planet--europa"> 
+                                <div class="d-content__planet d-content__planet--europa"></div>
+                            </div>
+                            <div class="d-content__mobile-tab">
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'moon')">MOON</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'mars')">MARS</button>
+                                <button class="d-content__mobile-tab-btn active-mobile-btn" onclick="openTab(event, 'europa')">EUROPA</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'titan')">TITAN</button>
+                            </div>
+                            <div class="d-content__planet-desc">
+                                <div class="d-content__tabdesc">
+                                    <h2>EUROPA</h2>
+                                    <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+                                </div>
+                                <div class="d-content__tab-bottom">
+                                    <div class="bottom-item">
+                                        <div class="title">AVG. DISTANCE</div>
+                                        <div class="desc">628 MIL. KM</div>
+                                    </div>
+                                    <div class="bottom-item">
+                                        <div class="title">EST. TRAVEL TIME</div>
+                                        <div class="desc">3 YEARS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-content__tabcontent" id="titan">
+                            <div class="d-content__pick-planet d-content__pick-planet--titan"> 
+                                <div class="d-content__planet d-content__planet--titan"></div>
+                            </div>
+                            <div class="d-content__mobile-tab">
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'moon')">MOON</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'mars')">MARS</button>
+                                <button class="d-content__mobile-tab-btn" onclick="openTab(event, 'europa')">EUROPA</button>
+                                <button class="d-content__mobile-tab-btn active-mobile-btn" onclick="openTab(event, 'titan')">TITAN</button>
+                            </div>
+                            <div class="d-content__planet-desc">
+                                <div class="d-content__tabdesc">
+                                    <h2>TITAN</h2>
+                                    <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+                                </div>
+                                <div class="d-content__tab-bottom">
+                                    <div class="bottom-item">
+                                        <div class="title">AVG. DISTANCE</div>
+                                        <div class="desc">1.6 BIL. KM</div>
+                                    </div>
+                                    <div class="bottom-item">
+                                        <div class="title">EST. TRAVEL TIME</div>
+                                        <div class="desc">7 YEARS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__bg">
+                <img src="assets/images/crew-bg.jpg" alt="">
+            </div>
+            <div class="content-wrapper crew-content">
+                <div class="content-wrapper__content-title crew-content__content-title">
+                    <h2><span>02</span> MEET YOUR CREW</h2>
+                </div>
+                <div class="swiper crew-content__swiper">
+                    <div class="swiper-wrapper crew-content__swiper-wrapper">
+                      <div class="swiper-slide crew-content__swiper-slide">
+                        <div class="crew-content__crew-desc">
+                           <h3>COMMANDER</h3> 
+                           <h2>DOUGLAS HURLEY</h2>
+                           <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+                        </div>
+                        <div class="crew-content__crew-img">
+                            <img src="assets/images/douglas-hurley.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide crew-content__swiper-slide">
+                        <div class="crew-content__crew-desc">
+                           <h3>MISSION SPECIALIST</h3> 
+                           <h2>MARK SHUTTLEWORTH</h2>
+                           <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+                        </div>
+                        <div class="crew-content__crew-img">
+                            <img src="assets/images/mark-shuttleworth.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide crew-content__swiper-slide">
+                        <div class="crew-content__crew-desc">
+                           <h3>PILOT</h3> 
+                           <h2>VICTOR GLOVER</h2>
+                           <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. </p>
+                        </div>
+                        <div class="crew-content__crew-img">
+                            <img src="assets/images/victor-gloveer.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide crew-content__swiper-slide">
+                        <div class="crew-content__crew-desc">
+                           <h3>FLIGHT ENGINER</h3> 
+                           <h2>ANOUSHEH ANSARI</h2>
+                           <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                        </div>
+                        <div class="crew-content__crew-img">
+                            <img src="assets/images/ano-ansari.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>    
+
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__bg">
+                <img src="assets/images/space-launch-bg.jpg" alt="">
+            </div>
+            <div class="space-launch">
+                <div class="content-wrapper launch-content">
+                    <div class="content-wrapper__content-title launch-content__content-title">
+                        <h2><span>03</span> SPACE LAUNCH 101</h2>
+                    </div>               
+                </div>
+                <div class="swiper space-launch__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide space-launch__swiper-slide">
+                            <div class="space-launch__slider-wrapper">
+                                <div class="space-launch__launch-desc">
+                                    <h3>THE TERMINOLOGY…</h3> 
+                                    <h2>LAUNCH VEHICLE</h2>
+                                    <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                                 </div>
+                                 <div class="space-launch__launch-img">
+                                    <img src="assets/images/launch1.jpg" alt="">
+                                </div>
+                            </div>                                                       
+                        </div>
+                        <div class="swiper-slide space-launch__swiper-slide">
+                            <div class="space-launch__slider-wrapper">
+                                <div class="space-launch__launch-desc">
+                                    <h3>THE TERMINOLOGY…</h3> 
+                                    <h2>SPACEPORT</h2>
+                                    <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.</p>
+                                 </div>
+                                 <div class="space-launch__launch-img">
+                                     <img src="assets/images/spaceport.jpg" alt="">
+                                 </div>
+                            </div>                            
+                        </div>
+                        <div class="swiper-slide space-launch__swiper-slide">
+                            <div class="space-launch__slider-wrapper">
+                                <div class="space-launch__launch-desc">
+                                    <h3>THE TERMINOLOGY…</h3> 
+                                    <h2>SPACE CAPSULE</h2>
+                                    <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.</p>
+                                 </div>
+                                 <div class="space-launch__launch-img space-launch__third-launch-img">
+                                    <img src="assets/images/spacecapsule.jpg" alt="">
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="swiper-pagination-launch space-launch__pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
