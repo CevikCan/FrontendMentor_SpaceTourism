@@ -37,6 +37,7 @@ $fontMontserratLight: MontserratLight;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     font-size: 18px;
     @media only screen and (max-width: 767px) {
@@ -61,7 +62,7 @@ header {
         right: 50%;
         transform: translateX(50%);
     }
-    @media only screen and (min-width: 768px) and (max-width: 1440px) {
+    @media only screen and (min-width: 768px) and (max-width: 1780px) {
         top: 0;
         right: 0;
     }
@@ -97,6 +98,14 @@ header {
             opacity: 0.25;
             @media only screen and (max-width: 1024px) {
                 display: none;
+            }
+            @media only screen and (min-width: 1025px) and (max-width: 1360px) {
+                width: 250px;
+                left: -220px;
+            }
+            @media only screen and (min-width: 1361px) and (max-width: 1780px) {
+                width: 450px;
+                left: -420px;
             }
         }
         &__item {
@@ -191,6 +200,9 @@ main {
     }
     @media only screen and (min-width: 1025px) and (max-width: 1440px) {
         width: calc(100% - 150px);
+    }
+    @media only screen and (min-width: 1441px) and (max-width: 1780px) {
+        width: calc(100% - 300px);
     }
     &__content-title {
         h2 {
@@ -343,7 +355,7 @@ main {
             width: 300px;
             height: 300px;
         }
-        @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+        @media only screen and (min-width: 1025px) and (max-width: 1780px) {
             width: 350px;
             height: 350px;
         }
@@ -381,7 +393,7 @@ main {
             width: 300px;
             height: 300px;
         }
-        @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+        @media only screen and (min-width: 1025px) and (max-width: 1780px) {
             width: 350px;
             height: 350px;
         }
@@ -459,6 +471,9 @@ main {
             padding-left: 150px;
             @media only screen and (max-width: 1024px) {
                 display: none;
+            }
+            @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+                padding-left: 0;
             }
         }
         &__mobile-tab {
@@ -807,6 +822,9 @@ main {
             top: 50%;
             transform: translateY(-50%);
         }
+        @media only screen and (min-width: 1025px) and (max-width: 1780px) {
+            gap: 100px;
+        }
     }
     &__launch-img {
         width: 100%;
@@ -839,6 +857,12 @@ main {
             text-align: center;
             padding-right: 25px;
             padding-left: 25px;
+        }
+        @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+            max-width: 400px;
+        }
+        @media only screen and (min-width: 1441px) and (max-width: 1780px) {
+            max-width: 450px;
         }
         h3 {
             font-family: $fontBarlowCondensed;
@@ -874,7 +898,7 @@ main {
        right: var(--swiper-pagination-right,auto) !important;
        left: var(--swiper-pagination-left,270px) !important;
        transform: none !important;
-       @media only screen and (max-width: 1024px) {
+       @media only screen and (max-width: 1440px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -891,9 +915,13 @@ main {
         bottom: 45% !important;
         transform: translate(-50%, -45%) !important;
        }
+       @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+        bottom: 30px;
+       }
        .swiper-pagination-bullet {
         display: flex !important;
         justify-content: center;
+        align-items: center;
         width: 80px;
         height: 80px;
         border: 1px solid rgba(255,255,255,0.25);
@@ -909,7 +937,7 @@ main {
             font-size: 16px;
             align-items: center;
         }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) and (max-width: 1440px) {
             width: 60px;
             height: 60px;
             font-size: 24px;

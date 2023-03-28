@@ -1,3 +1,45 @@
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+let section = gsap.utils.toArray(".section"),
+    observer = ScrollTrigger.normalizeScroll(true),
+    scrollTween;
+
+document.addEventListener("touchstart", e => {
+  if (scrollTween) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  }
+}, {capture: true, passive: false})
+
+function goToSection(i) {
+  scrollTween = gsap.to(window, {
+    scrollTo: {y: i * innerHeight, autoKill: false},
+    onStart: () => {
+      observer.disable();
+      observer.enable();
+    },
+    duration: 1,
+    onComplete: () => scrollTween = null,
+    overwrite: true
+  });
+}
+
+section.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top bottom",
+    end: "+=199%",
+    onToggle: self => self.isActive && !scrollTween && goToSection(i)
+  });
+});
+
+ScrollTrigger.create({
+  start: 0, 
+  end: "max",
+  snap: 1 / (panels.length - 1)
+})
+
 let openTab = (evt, planet) => {
     let tabLinks, mobileTabLinks, tabcontent, i;
 
