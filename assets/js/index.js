@@ -1,24 +1,15 @@
-gsap.registerPlugin(ScrollTrigger);
-
+const dContentTitle = document.querySelector(".d-content-title");
 
 new fullpage('#fullpage', {
-  anchors:['home', 'destination', 'crew', 'technology'],
+  anchors:['home', 'planet-destination', 'crew', 'technology'],
   menu: "#menu",
-  slidesNavigation: true
+  slidesNavigation: true,
+  onLeave: function(origin, destination, direction) {
+    if(origin.index == 0) {
+      dContentTitle.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+    }
+  }
 });
-
-gsap.from(".home-content__text",{
-  y: -50,
-  opacity: 0,
-  duration: 1
-})
-
-gsap.from(".d-content__wrapper",{
-  scrollTrigger: "#section1",
-  x: -100,
-  opacity: 0,
-  duration: 1
-})
 
 let openTab = (evt, planet) => {
     let tabLinks, mobileTabLinks, tabcontent, i;
