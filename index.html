@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css" integrity="sha512-DbP1b6q56Ud5q0L+lvw9COyyH/+pN1lVmySvun4UsH8vmfdIHou+PAHfMnGXf6Fvd9rYLjSojeuPhQz2euU1cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -18,10 +19,12 @@
         </div>
         <div class="header-line"></div>
         <nav class="nav">
-            <a href="#home" class="nav__item active"><span class="nav__route-number">00</span> HOME</a>
-            <a href="#destination" class="nav__item"><span class="nav__route-number">01</span> DESTINATION</a>
-            <a href="#" class="nav__item"><span class="nav__route-number">02</span> CREW</a>
-            <a href="#" class="nav__item"><span class="nav__route-number">04</span> TECHNOLOGY</a>
+            <ul id="menu">
+                <li data-menuanchor="home"><a href="#home" class="nav__item active"><span class="nav__route-number">00</span> HOME</a></li>
+                <li data-menuanchor="destination"><a href="#destination" class="nav__item"><span class="nav__route-number">01</span> DESTINATION</a></li>
+                <li data-menuanchor="crew"><a href="#crew" class="nav__item"><span class="nav__route-number">02</span> CREW</a></li>       
+                <li data-menuanchor="technology"><a href="#technology" class="nav__item"><span class="nav__route-number">04</span> TECHNOLOGY</a></li>
+            </ul>            
         </nav>
         <div class="menu-icon">            
             <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,8 +34,8 @@
             </svg>    
         </div>
     </header>
-    <main>
-        <section class="section" id="home">
+    <main class="main-scroll" id="fullpage">
+        <section class="section" id="section0">
             <div class="section__bg"> 
                 <img src="assets/images/Bitmap.jpg" class="desktop-bg" alt="">
                 <img src="assets/images/mobile-first-bg.jpg" class="mobile-bg" alt="">
@@ -50,7 +53,7 @@
                 </div>
             </div>
         </section>
-        <section class="section" id="destination">
+        <section class="section" id="section1">
             <div class="section__bg">
                 <img src="assets/images/destination-bg.jpg" alt="">
             </div>
@@ -176,7 +179,7 @@
                     </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section" id="section2">
             <div class="section__bg">
                 <img src="assets/images/crew-bg.jpg" alt="">
             </div>
@@ -232,7 +235,7 @@
 
             </div>
         </section>
-        <section class="section">
+        <section class="section section3" id="section3">
             <div class="section__bg">
                 <img src="assets/images/space-launch-bg.jpg" alt="">
             </div>
@@ -288,7 +291,8 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js" integrity="sha512-GS3CSFQ4aj+0fL2a0wV1ouvpdbTZ3eEUriXTpXt50dc0CkO1fgyWuLoPA5NWy1PAWmcaZNneM+OAThgCqPnX+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/js/index.js"></script>

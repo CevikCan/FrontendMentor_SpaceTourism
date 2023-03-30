@@ -1,43 +1,23 @@
+gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-let section = gsap.utils.toArray(".section"),
-    observer = ScrollTrigger.normalizeScroll(true),
-    scrollTween;
-
-document.addEventListener("touchstart", e => {
-  if (scrollTween) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-  }
-}, {capture: true, passive: false})
-
-function goToSection(i) {
-  scrollTween = gsap.to(window, {
-    scrollTo: {y: i * innerHeight, autoKill: false},
-    onStart: () => {
-      observer.disable();
-      observer.enable();
-    },
-    duration: 1,
-    onComplete: () => scrollTween = null,
-    overwrite: true
-  });
-}
-
-section.forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top bottom",
-    end: "+=199%",
-    onToggle: self => self.isActive && !scrollTween && goToSection(i)
-  });
+new fullpage('#fullpage', {
+  anchors:['home', 'destination', 'crew', 'technology'],
+  menu: "#menu",
+  slidesNavigation: true
 });
 
-ScrollTrigger.create({
-  start: 0, 
-  end: "max",
-  snap: 1 / (panels.length - 1)
+gsap.from(".home-content__text",{
+  y: -50,
+  opacity: 0,
+  duration: 1
+})
+
+gsap.from(".d-content__wrapper",{
+  scrollTrigger: "#section1",
+  x: -100,
+  opacity: 0,
+  duration: 1
 })
 
 let openTab = (evt, planet) => {
@@ -76,6 +56,9 @@ var swiper2 = new Swiper(".space-launch__swiper", {
   pagination: {
     el: ".swiper-pagination-launch",
     clickable: true,
+    lidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
