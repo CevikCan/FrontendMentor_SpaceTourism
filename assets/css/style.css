@@ -252,6 +252,7 @@ main {
   color: #FFF;
   letter-spacing: 4.72px;
   margin-bottom: 97px;
+  display: inline-block;
 }
 .content-wrapper__content-title h2 span {
   opacity: 0.25;
@@ -1136,4 +1137,8 @@ main {
 .space-launch__pagination .swiper-pagination-bullet-active {
   background-color: #FFF;
   color: #000;
+}
+
+.fp-watermark {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -220,6 +220,7 @@ main {
             color: #FFF;
             letter-spacing: 4.72px;
             margin-bottom: 97px;
+            display: inline-block;
             span {
                 opacity: 0.25;
             }
@@ -964,4 +965,7 @@ main {
         color: #000;
        }
     }
+}
+.fp-watermark {
+    display: none;
 }
