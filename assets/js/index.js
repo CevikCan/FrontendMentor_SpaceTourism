@@ -1,27 +1,27 @@
 
 new fullpage('#fullpage', {
   anchors:['home', 'planet-destination', 'crew', 'technology'],
-  menu: "#menu",
+  menu: ["#menu","#mobile-menu"],
   slidesNavigation: true,
   onLeave: function(origin, destination, direction) {
     if(origin.index == 0) {
-      document.querySelector(".d-animate-title").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
-      document.querySelector(".planet-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
-      document.querySelector(".tab-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-3s");
-      document.querySelector(".mobile-tab-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-3s");
-      document.querySelector(".planet-desc-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-3s");
+      document.querySelector(".d-animate-title").classList.add("animate__animated", "animate__zoomIn", "animate__delay-.5s");
+      document.querySelector(".planet-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
+      document.querySelector(".tab-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
+      document.querySelector(".mobile-tab-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
+      document.querySelector(".planet-desc-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
     }
     if(origin.index == 1) {
-      document.querySelector(".crew-title-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
+      document.querySelector(".crew-title-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-.5s");
       document.querySelector(".crew-pagination-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
       document.querySelector(".crew-desc-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
       document.querySelector(".crew-img-animate").classList.add("animate__animated", "animate__fadeInUp", "animate__delay-2s");
     }
     if(origin.index == 2) {
-      document.querySelector(".launch-title-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
-      document.querySelector(".launch-desc-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
-      document.querySelector(".space-launch__pagination").classList.add("animate__animated", "animate__zoomIn", "animate__delay-3s");
-      document.querySelector(".launch-img-animate").classList.add("animate__animated", "animate__fadeInRight", "animate__delay-3s");
+      document.querySelector(".launch-title-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-.5s");
+      document.querySelector(".launch-desc-animate").classList.add("animate__animated", "animate__zoomIn", "animate__delay-1s");
+      document.querySelector(".space-launch__pagination").classList.add("animate__animated", "animate__zoomIn", "animate__delay-2s");
+      document.querySelector(".launch-img-animate").classList.add("animate__animated", "animate__fadeInRight", "animate__delay-2s");
       
     }
   }
@@ -83,3 +83,15 @@ function getDirection() {
 
   return direction;
 }
+
+const closeIcon = document.querySelector(".close-menu-icon");
+const mobileMenu = document.querySelector(".mobile-menu-wrapper");
+const menuIcon = document.querySelector(".menu-icon");
+
+menuIcon.addEventListener("click",()=> {
+  mobileMenu.style.right = "0";
+})
+
+closeIcon.addEventListener("click",()=> {
+  mobileMenu.style.right = "-200%";
+})

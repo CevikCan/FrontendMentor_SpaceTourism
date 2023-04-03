@@ -159,6 +159,43 @@ header {
         }
     }
 }
+.mobile-menu-wrapper {
+    display: block;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    right: -200%;
+    top: 0;
+    width: 254px;
+    height: 100%;
+    z-index: 100;
+    padding-top: 118px;
+    transition: all .3s ease;
+    ul {
+        list-style: none;
+        li {
+            width: 100%;
+            padding-left: 32px;
+            margin-bottom: 32px;
+            a {
+                font-size: 16px;
+                color: #FFF;
+                text-decoration: none;
+                font-family: $fontBarlowCondensed;
+            }
+        }
+        span {
+            font-family: $fontBarlowCondBold;
+        }
+        .active {
+            border-right: 3px solid #FFF;
+        }
+    }
+    .close-menu-icon {
+        position: absolute;
+        top: 33px;
+        right: 26px;
+    }
+}
 main {
     width: 100%;
     height: 100vh;

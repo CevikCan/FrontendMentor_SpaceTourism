@@ -180,6 +180,45 @@ header .menu-icon {
   }
 }
 
+.mobile-menu-wrapper {
+  display: block;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  right: -200%;
+  top: 0;
+  width: 254px;
+  height: 100%;
+  z-index: 100;
+  padding-top: 118px;
+  transition: all 0.3s ease;
+}
+.mobile-menu-wrapper ul {
+  list-style: none;
+}
+.mobile-menu-wrapper ul li {
+  width: 100%;
+  padding-left: 32px;
+  margin-bottom: 32px;
+}
+.mobile-menu-wrapper ul li a {
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-family: BarlowCondensed;
+}
+.mobile-menu-wrapper ul span {
+  font-family: BarlowCondensedBold;
+}
+.mobile-menu-wrapper ul .active {
+  border-right: 3px solid #FFF;
+}
+.mobile-menu-wrapper .close-menu-icon {
+  position: absolute;
+  top: 33px;
+  right: 26px;
+}
+
 main {
   width: 100%;
   height: 100vh;
